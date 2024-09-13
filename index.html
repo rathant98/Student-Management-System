@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px; /* Adjust as needed */
+            margin: 0 auto;
+            padding-bottom: 100px; 
+            padding-top: 50px; 
+            display: flex;
+            justify-content: space-between; /* Aligns items along the main axis with space between */
+            align-items: flex-start; /* Aligns items along the cross axis at the start */
+        }
+		
+		/* Navigation Styles */
+        nav {
+            position: absolute;
+            left: 200px;
+            top: 50%;
+			
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 150px;
+            height: 150px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 5px 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 12px;
+        }
+
+        /* Form Styles */
+        form {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea,
+        select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        select {
+            height: 40px;
+        }
+
+        input[type="reset"],
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        input[type="reset"] {
+            background-color: #ccc;
+        }
+
+        input[type="reset"]:hover,
+        input[type="submit"]:hover {
+            opacity: 0.8;
+        }
+
+        .image-upload {
+            align-items: center;
+            display: flex;
+            padding-bottom: 20px;
+        }
+
+        .image-upload img {
+            padding-left: 20px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .image-upload-file {
+            padding-left: 20px;
+        }
+		
+		.formimage
+		{
+            height: 800px;
+			padding-left: 5%;
+		}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img class="logo" src="assets/logo.png" alt="Logo">
+    <h1>Student Management System</h1>
+	<nav>
+	  <a href="index.html">Home</a>
+	  <a href="find.html">View</a>
+	</nav>
+</header>
+
+<div class="container">
+    <img class="formimage" src="assets/leftside.jpg" alt="formimage" />
+	
+    <form action="db.py" method="post" enctype="multipart/form-data">
+
+        <div class="image-upload">
+            <b>Profile Image:</b>
+            <img src="assets/avatar.png" alt="Avatar" />
+            <input type="file" class="image-upload-file" name="image">
+        </div>
+
+        <b>User Name:</b>
+        <input type="text" placeholder="Enter your User Name" name="username">
+
+        <b>Name:</b>
+        <input type="text" placeholder="Enter your Name" name="name">
+
+        <b>Email:</b>
+        <input type="email" placeholder="Enter your E-Mail" name="mail">
+
+        <b>Registration Number:</b>
+        <input type="text" placeholder="Enter your Registration Number" name="regno">
+
+        <b>Date of Birth:</b>
+        <input type="date" placeholder="Enter your DOB" name="dob">
+
+        <b>Telephone No:</b>
+        <input type="tel" placeholder="Enter your TP No" name="phoneno">
+
+        <b>Department:</b>
+        <select name="department" id="department">
+            <option value="CS">Computer Science</option>
+            <option value="IT">Information Technology</option>
+            <option value="PS">Physical Science</option>
+            <option value="BS">Bio Science</option>
+        </select>
+
+        <b>Course:</b>
+        <textarea name="course" placeholder="Enter your course"></textarea>
+
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </div>
+
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2024 Student Management System. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

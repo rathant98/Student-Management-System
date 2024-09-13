@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px; /* Adjust as needed */
+            margin: 0 auto;
+            padding-bottom: 100px; 
+            padding-top: 50px; 
+            display: flex;
+            
+        }
+		
+		/* Navigation Styles */
+        nav {
+            position: absolute;
+            left: 200px;
+            top: 50%;
+			
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 150px;
+            height: 150px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 5px 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 12px;
+        }
+
+        /* Form Styles */
+        form {
+			align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            
+        }
+		
+		input[type="text"],
+        select {
+            width: 500px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+		
+		input[type="submit"] {
+            border: none;
+			padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+<header>
+    <img class="logo" src="assets/logo.png" alt="Logo">
+    <h1>Student Management System</h1>
+	<nav>
+	  <a href="index.html">Home</a>
+	  <a href="find.html">View</a>
+	</nav>
+</header>
+
+
+<div class="container">
+<form action="dbview.py" method="post" enctype="multipart/form-data">
+<b>Enter the Registration Number: </b>
+    <input type="text" placeholder="Enter the Registration Number" name="find">
+	<input type="submit" value="Search">
+</form>
+</div>
+<footer>
+    <p>&copy; 2024 Student Management System. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
